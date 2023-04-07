@@ -14,7 +14,7 @@ const FriendListWidget = ({ userId }) => {
 
   const getFriends = async () => {
     const response = await fetch(
-      `http://${process.env.REACT_APP_IP}:3001/users/${userId}/friends`,
+      `${process.env.REACT_APP_IP}/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
