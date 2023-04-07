@@ -47,7 +47,7 @@ const PostWidget = ({
 
   const patchLike = async () => {
     // console.log("HEYO");
-    const response = await fetch(`http://${process.env.REACT_APP_IP}:3001/posts/${postId}/like`, {
+    const response = await fetch(`${process.env.REACT_APP_IP}/posts/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -80,7 +80,7 @@ const PostWidget = ({
     console.log(JSON.stringify(requestbody))
 
     // ToggleComments(!showComments);
-    const response = await fetch(`http://${process.env.REACT_APP_IP}:3001/posts/${postId}/comment`, {
+    const response = await fetch(`${process.env.REACT_APP_IP}/posts/${postId}/comment`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -115,7 +115,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`http://${process.env.REACT_APP_IP}:3001/assets/${picturePath}`}
+          src={`${process.env.REACT_APP_IP}/assets/${picturePath}`}
         />
       )}
       <FlexBetween mt="0.25rem">
