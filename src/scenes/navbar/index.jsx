@@ -56,7 +56,7 @@ const Navbar = () => {
   const searchbox = async () => {
 
     if (search != "") {
-      const response = await fetch(`http://${process.env.REACT_APP_IP}:3001/posts/${search}`, {
+      const response = await fetch(`${process.env.REACT_APP_IP}/posts/${search}`, {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       });
