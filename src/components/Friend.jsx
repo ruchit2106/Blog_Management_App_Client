@@ -42,7 +42,7 @@ const Friend = ({call, postId, friendId, name, subtitle, userPicturePath }) => {
 
   const DeletePost = async () => {
     const response = await fetch(
-      `http://${process.env.REACT_APP_IP}:3001/posts/${postId}`,
+      `${process.env.REACT_APP_IP}:3001/posts/${postId}`,
       {
         method:"DELETE",
         headers: {
@@ -62,7 +62,7 @@ const Friend = ({call, postId, friendId, name, subtitle, userPicturePath }) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `http://${process.env.REACT_APP_IP}:3001/users/${_id}/${friendId}`,
+      `${process.env.REACT_APP_IP}:3001/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {
